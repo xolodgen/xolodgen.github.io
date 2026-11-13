@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ремонт бытовой техники в Лотошино — частный мастер Евгений</title>
+<meta name="description" content="Частный мастер по ремонту холодильников, стиральных машин и электроники в Лотошино. Без посредников, выезд в день обращения, гарантия 12 месяцев.">
+<style>
+* { margin:0; padding:0; box-sizing:border-box; }
+body { font-family:'Segoe UI', Arial, sans-serif; color:#222; background:#f7f8fa; line-height:1.6; }
+.container { max-width:1100px; margin:0 auto; padding:0 20px; }
+h2 { font-size:30px; margin-bottom:12px; text-align:center; }
+.sub { text-align:center; color:#666; margin-bottom:34px; }
+section { padding:56px 0; }
+.btn { display:inline-block; padding:13px 28px; border-radius:8px; text-decoration:none; font-weight:600; font-size:16px; transition:.2s; }
+.btn-green { background:#25D366; color:#fff; }
+.btn-green:hover { background:#1eb457; }
+.btn-blue { background:#1565d8; color:#fff; }
+.btn-blue:hover { background:#0d4fb0; }
+.btn-outline { border:2px solid #1565d8; color:#1565d8; }
+.btn-outline:hover { background:#e8f1ff; }
+
+/* HEADER */
+header { background:#fff; box-shadow:0 2px 10px rgba(0,0,0,.08); position:sticky; top:0; z-index:100; }
+.header-inner { display:flex; justify-content:space-between; align-items:center; padding:14px 0; flex-wrap:wrap; }
+.logo { font-size:22px; font-weight:700; color:#1565d8; }
+.logo span { color:#e63946; }
+nav a { text-decoration:none; color:#333; margin-left:22px; font-size:15px; }
+nav a:hover { color:#1565d8; }
+.header-phone { text-align:right; }
+.header-phone a { font-size:19px; font-weight:700; color:#1565d8; text-decoration:none; display:block; }
+.header-phone small { color:#777; font-size:12px; }
+
+/* HERO */
+.hero { background:linear-gradient(135deg,#123a6d 0%,#1565d8 100%); color:#fff; padding:80px 0; }
+.hero h1 { font-size:38px; line-height:1.25; margin-bottom:18px; max-width:720px; }
+.hero p { font-size:19px; max-width:640px; margin-bottom:28px; opacity:.92; }
+.hero .btn { margin-right:14px; margin-bottom:10px; }
+.hero-badges { margin-top:30px; display:flex; gap:14px; flex-wrap:wrap; }
+.badge { background:rgba(255,255,255,.12); padding:10px 18px; border-radius:8px; font-size:15px; }
+
+/* SERVICES */
+.services { display:grid; grid-template-columns:repeat(auto-fit,minmax(240px,1fr)); gap:22px; }
+.card { background:#fff; border-radius:12px; padding:26px; box-shadow:0 2px 12px rgba(0,0,0,.06); }
+.card h3 { color:#1565d8; margin-bottom:10px; font-size:20px; }
+.card p { color:#555; font-size:15px; margin-bottom:16px; }
+.card .btn { font-size:14px; padding:9px 18px; margin-right:8px; }
+
+/* WHY */
+.why { display:grid; grid-template-columns:repeat(auto-fit,minmax(230px,1fr)); gap:20px; }
+.why .card { text-align:center; }
+.why .num { font-size:34px; font-weight:800; color:#1565d8; display:block; margin-bottom:6px; }
+
+/* TIPS */
+.tips { display:grid; grid-template-columns:repeat(auto-fit,minmax(280px,1fr)); gap:20px; }
+.tip { background:#eef4ff; border-left:4px solid #1565d8; border-radius:8px; padding:20px; }
+.tip h4 { margin-bottom:8px; color:#123a6d; }
+.tip p { font-size:15px; color:#444; }
+
+/* PRICE */
+table { width:100%; border-collapse:collapse; background:#fff; border-radius:10px; overflow:hidden; box-shadow:0 2px 10px rgba(0,0,0,.06); }
+th { background:#1565d8; color:#fff; text-align:left; padding:13px 16px; font-size:15px; }
+td { padding:12px 16px; border-bottom:1px solid #eee; font-size:15px; }
+tr:last-child td { border-bottom:none; }
+.price-note { color:#777; font-size:14px; margin-top:12px; }
+.price-cta { text-align:center; margin-top:30px; }
+
+/* STEPS */
+.steps { display:grid; grid-template-columns:repeat(auto-fit,minmax(200px,1fr)); gap:20px; }
+.step { background:#fff; border-radius:12px; padding:22px; box-shadow:0 2px 10px rgba(0,0,0,.06); }
+.step .num { width:38px; height:38px; border-radius:50%; background:#1565d8; color:#fff; font-weight:700; display:flex; align-items:center; justify-content:center; margin-bottom:12px; }
+.step h4 { margin-bottom:6px; }
+
+/* BRANDS */
+.brands { display:flex; flex-wrap:wrap; gap:10px; justify-content:center; }
+.brand { background:#fff; border:1px solid #dde4ee; border-radius:8px; padding:10px 20px; font-weight:600; color:#445; box-shadow:0 1px 4px rgba(0,0,0,.04); }
+.brands-note { text-align:center; color:#777; margin-top:16px; font-size:14px; }
+
+/* REVIEWS */
+.reviews { display:grid; grid-template-columns:repeat(auto-fit,minmax(280px,1fr)); gap:20px; }
+.review { background:#fff; border-radius:12px; padding:24px; box-shadow:0 2px 10px rgba(0,0,0,.06); font-style:italic; color:#444; }
+.review b { display:block; margin-top:12px; font-style:normal; color:#1565d8; }
+.stars { color:#f5a623; margin-bottom:8px; }
+
+/* FAQ */
+details { background:#fff; border-radius:10px; margin-bottom:12px; box-shadow:0 1px 6px rgba(0,0,0,.05); overflow:hidden; }
+summary { padding:17px 20px; cursor:pointer; font-weight:600; list-style:none; position:relative; }
+summary::-webkit-details-marker { display:none; }
+summary::after { content:'+'; position:absolute; right:20px; font-size:22px; color:#1565d8; }
+details[open] summary::after { content:'−'; }
+details p { padding:0 20px 17px; color:#555; font-size:15px; }
+
+/* CONTACTS */
+.contacts-wrap { display:grid; grid-template-columns:1fr 1fr; gap:26px; }
+@media (max-width:800px){ .contacts-wrap { grid-template-columns:1fr; } }
+.contact-box { background:#fff; border-radius:12px; padding:28px; box-shadow:0 2px 10px rgba(0,0,0,.06); }
+.contact-box h3 { margin-bottom:14px; color:#1565d8; }
+.contact-box a.tel { font-size:23px; font-weight:700; color:#123a6d; text-decoration:none; display:block; margin-bottom:6px; }
+.contact-box .muted { color:#777; font-size:14px; margin-bottom:16px; }
+.photo-placeholder { background:#dfe5ec; border:2px dashed #aab6c6; border-radius:10px; height:230px; display:flex; align-items:center; justify-content:center; color:#7b8794; text-align:center; padding:16px; font-size:14px; }
+.zone { margin-top:20px; }
+.zone ul { margin:10px 0 0 18px; color:#555; font-size:15px; }
+label { display:block; margin-bottom:6px; font-weight:600; font-size:14px; }
+input, textarea { width:100%; padding:12px; border:1px solid #ccd4de; border-radius:8px; margin-bottom:14px; font-size:15px; font-family:inherit; }
+input:focus, textarea:focus { outline:none; border-color:#1565d8; }
+.form-ok { color:#1b7a3d; font-weight:600; margin-top:10px; }
+
+/* FOOTER */
+footer { background:#123a6d; color:#cdd8e6; padding:30px 0; text-align:center; font-size:14px; }
+footer a { color:#fff; text-decoration:none; font-weight:700; }
+
+/* FLOATING WA */
+.wa-float { position:fixed; bottom:24px; right:24px; width:60px; height:60px; border-radius:50%; background:#25D366; display:flex; align-items:center; justify-content:center; box-shadow:0 4px 14px rgba(0,0,0,.25); z-index:99; }
+.wa-float svg { width:32px; height:32px; fill:#fff; }
+@media (max-width:700px){
+  .hero h1 { font-size:27px; } .hero { padding:54px 0; }
+  h2 { font-size:24px; }
+  nav { display:none; }
+  .header-phone small { display:none; }
+}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="container header-inner">
+    <div class="logo">Мастер<span>Лотошино</span></div>
+    <nav>
+      <a href="#services">Услуги</a>
+      <a href="#price">Прайс</a>
+      <a href="#faq">Вопросы</a>
+      <a href="#contacts">Контакты</a>
+      <a href="tel:+79015551397">Телефон</a>
+    </nav>
+    <div class="header-phone">
+      <a href="tel:+79015551397">+7 901 555-13-97</a>
+      <small>с 9:00 до 20:00, без выходных</small>
+    </div>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="container">
+    <h1>Ремонт бытовой техники и электроники в Лотошино</h1>
+    <p>Частный мастер по ремонту бытовой техники в Лотошино. Работаю без посредников: вы общаетесь напрямую со мной, без наценок и диспетчеров. Диагностика — бесплатно при ремонте. Выезжаю в Лотошино и соседние районы: Шаховская, Волоколамск, Клин, Истра.</p>
+    <a class="btn btn-green" href="https://wa.me/79015551397">Написать в WhatsApp</a>
+    <a class="btn btn-blue" href="tel:+79015551397">Позвонить сейчас</a>
+    <div class="hero-badges">
+      <div class="badge">✓ Выезжаю в день обращения</div>
+      <div class="badge">✓ Гарантия 12 месяцев</div>
+      <div class="badge">✓ Диагностика бесплатна при ремонте</div>
+      <div class="badge">✓ Ремонт плат на компонентах</div>
+    </div>
+  </div>
+</section>
+
+<section id="services">
+  <div class="container">
+    <h2>Что чиню</h2>
+    <p class="sub">Крупная техника — на дому. Электроника и мелкая техника — в моей мастерской.</p>
+    <div class="services">
+      <div class="card">
+        <h3>Холодильники</h3>
+        <p>Не морозит, течёт, шумит, не включается. Заправка фреоном, замена термостата, компрессора, ремонт No Frost. Чиню на дому.</p>
+        <a class="btn btn-outline" href="https://wa.me/79015551397">WhatsApp</a>
+        <a class="btn btn-outline" href="tel:+79015551397">Позвонить</a>
+      </div>
+      <div class="card">
+        <h3>Стиральные машины</h3>
+        <p>Не крутит барабан, течёт, не сливает воду, ошибки на дисплее. Замена подшипников, насосов, ТЭНов. Чиню на дому.</p>
+        <a class="btn btn-outline" href="https://wa.me/79015551397">WhatsApp</a>
+        <a class="btn btn-outline" href="tel:+79015551397">Позвонить</a>
+      </div>
+      <div class="card">
+        <h3>Электроника</h3>
+        <p>Модули и платы холодильников, стиральных машин, микроволновок. Ремонт на уровне компонентов: не включается, ошибки на дисплее, сгоревшие детали.</p>
+        <a class="btn btn-outline" href="https://wa.me/79015551397">WhatsApp</a>
+        <a class="btn btn-outline" href="tel:+79015551397">Позвонить</a>
+      </div>
+      <div class="card">
+        <h3>Мелкая техника</h3>
+        <p>Микроволновки, кофемашины, пылесосы. Чиню в мастерской — привезите сами или заберу при выезде.</p>
+        <a class="btn btn-outline" href="https://wa.me/79015551397">WhatsApp</a>
+        <a class="btn btn-outline" href="tel:+79015551397">Позвонить</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section style="background:#eef4ff">
+  <div class="container">
+    <h2>Почему стоит обратиться ко мне</h2>
+    <p class="sub">Никаких диспетчеров и наценок — вы работаете напрямую с мастером</p>
+    <div class="why">
+      <div class="card"><span class="num">15</span><p>лет опыта ремонта бытовой техники и электроники</p></div>
+      <div class="card"><span class="num">2000+</span><p>выполненных ремонтов</p></div>
+      <div class="card"><span class="num">1 час</span><p>выезд по Лотошино</p></div>
+      <div class="card"><span class="num">12 мес.</span><p>гарантия на работу и запчасти</p></div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="container">
+    <h2>Не нужен ремонт? Проверьте сначала это</h2>
+    <p class="sub">Бесплатные советы, которые часто решают проблему без мастера</p>
+    <div class="tips">
+      <div class="tip"><h4>Холодильник не морозит</h4><p>Проверьте, включён ли шнур в розетку и горит ли свет внутри. Убедитесь, что ручку терморегулятора не повернули случайно на минимум. Проверьте, не забиты ли решётка сзади и вентиляционные зазоры.</p></div>
+      <div class="tip"><h4>Стиральная машина не включается</h4><p>Проверьте розетку другим прибором и осмотрите вилку. Убедитесь, что дверца плотно закрыта — до щелчка. Если машина стоит у стены, посмотрите, не пережат ли заливной шланг.</p></div>
+      <div class="tip"><h4>Микроволновка греет слабо</h4><p>Проверьте, не загрязнены ли дверца и слюдяная пластина внутри. Не ставьте внутрь металлическую посуду. Если внутри искрит — отключите сразу, это уже повод вызвать мастера.</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="price" style="background:#eef4ff">
+  <div class="container">
+    <h2>Прайс</h2>
+    <p class="sub">Диагностика бесплатна при ремонте. Цены указаны без стоимости запчастей.</p>
+
+    <h3 style="margin-bottom:12px">Холодильники</h3>
+    <table>
+      <tr><th>Услуга</th><th>Цена</th></tr>
+      <tr><td>Диагностика</td><td>Бесплатно при ремонте (иначе 800 ₽)</td></tr>
+      <tr><td>Заправка фреоном</td><td>от 1 800 ₽</td></tr>
+      <tr><td>Замена термостата</td><td>от 1 500 ₽</td></tr>
+      <tr><td>Замена компрессора</td><td>от 4 500 ₽</td></tr>
+      <tr><td>Ремонт No Frost</td><td>от 3 000 ₽</td></tr>
+    </table>
+
+    <h3 style="margin:26px 0 12px">Стиральные машины</h3>
+    <table>
+      <tr><th>Услуга</th><th>Цена</th></tr>
+      <tr><td>Замена ТЭНа</td><td>от 1 800 ₽</td></tr>
+      <tr><td>Замена насоса</td><td>от 1 800 ₽</td></tr>
+      <tr><td>Замена подшипников</td><td>от 4 000 ₽</td></tr>
+      <tr><td>Устранение течи</td><td>от 1 200 ₽</td></tr>
+    </table>
+
+    <h3 style="margin:26px 0 12px">Электроника</h3>
+    <table>
+      <tr><th>Услуга</th><th>Цена</th></tr>
+      <tr><td>Ремонт модуля холодильника или стиральной машины</td><td>от 2 500 ₽</td></tr>
+      <tr><td>Ремонт плат микроволновки, духовки</td><td>от 1 500 ₽</td></tr>
+      <tr><td>Замена реле, симисторов</td><td>от 1 200 ₽</td></tr>
+      <tr><td>Ремонт блоков питания</td><td>от 1 000 ₽</td></tr>
+      <tr><td>Восстановление после скачка напряжения или залития</td><td>от 1 500 ₽</td></tr>
+    </table>
+
+    <h3 style="margin:26px 0 12px">Мелкая техника</h3>
+    <table>
+      <tr><th>Услуга</th><th>Цена</th></tr>
+      <tr><td>Диагностика в мастерской</td><td>Бесплатно при ремонте</td></tr>
+      <tr><td>Ремонт микроволновки</td><td>от 900 ₽</td></tr>
+      <tr><td>Ремонт кофемашины</td><td>от 1 500 ₽</td></tr>
+      <tr><td>Ремонт пылесоса</td><td>от 900 ₽</td></tr>
+    </table>
+    <p class="price-note">Ремонт мелкой техники — в мастерской. Можно привезти самому или оставить при выезде мастера.</p>
+    <div class="price-cta">
+      <a class="btn btn-green" href="https://wa.me/79015551397">Уточнить цену в WhatsApp</a>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="container">
+    <h2>Как работаем</h2>
+    <p class="sub">Всё просто — от звонка до работающего прибора</p>
+    <div class="steps">
+      <div class="step"><div class="num">1</div><h4>Звонок или заявка</h4><p>Опишите проблему — подскажу, что можно проверить, и назову примерную цену.</p></div>
+      <div class="step"><div class="num">2</div><h4>Выезд и диагностика</h4><p>Приезжаю в день обращения, нахожу поломку и называю точную цену до ремонта.</p></div>
+      <div class="step"><div class="num">3</div><h4>Ремонт</h4><p>Крупная техника — на дому. Электроника и мелкая — в мастерской, срок 1–3 дня.</p></div>
+      <div class="step"><div class="num">4</div><h4>Гарантия</h4><p>Проверяю работу при вас и даю гарантию до 12 месяцев.</p></div>
+    </div>
+  </div>
+</section>
+
+<section style="background:#eef4ff">
+  <div class="container">
+    <h2>Ремонтирую все бренды</h2>
+    <div class="brands">
+      <div class="brand">Samsung</div><div class="brand">LG</div><div class="brand">Bosch</div><div class="brand">Indesit</div><div class="brand">Атлант</div><div class="brand">Beko</div><div class="brand">Haier</div><div class="brand">Electrolux</div><div class="brand">Ariston</div><div class="brand">Whirlpool</div><div class="brand">Stinol</div><div class="brand">Liebherr</div><div class="brand">Candy</div><div class="brand">Gorenje</div>
+    </div>
+    <p class="brands-note">Если бренда нет в списке — всё равно звоните, разберусь.</p>
+  </div>
+</section>
+
+<section>
+  <div class="container">
+    <h2>Отзывы</h2>
+    <p class="sub"><!-- ЗАМЕНИТЕ НА РЕАЛЬНЫЕ ОТЗЫВЫ КЛИЕНТОВ --></p>
+    <div class="reviews">
+      <div class="review"><div class="stars">★★★★★</div>«Холодильник перестал морозить, Евгений приехал в тот же день, нашёл проблему с фреоном. Починил на дому, работает уже полгода без нареканий.»<b>Наталья, Лотошино</b></div>
+      <div class="review"><div class="stars">★★★★★</div>«Стиральная машина текла снизу. Мастер приехал, заменил насос за час. Цена совпала с той, что назвал по телефону. Никаких доплат.»<b>Сергей, Шаховская</b></div>
+      <div class="review"><div class="stars">★★★★★</div>«Не включалась стиралка, в сервисе сказали менять модуль целиком. Евгений отремонтировал саму плату — вышло в три раза дешевле.»<b>Ольга, Волоколамск</b></div>
+    </div>
+  </div>
+</section>
+
+<section id="faq" style="background:#eef4ff">
+  <div class="container">
+    <h2>Частые вопросы</h2>
+    <p class="sub">Если не нашли ответ — позвоните, расскажу</p>
+    <details open><summary>Сколько стоит выезд?</summary><p>Выезд бесплатный, если делаете ремонт. Если ремонт отменяете — выезд и диагностика 800 ₽.</p></details>
+    <details><summary>Какая гарантия?</summary><p>На работу и установленные запчасти даю гарантию до 12 месяцев. Конкретный срок зависит от вида ремонта, всегда называю его до начала работ.</p></details>
+    <details><summary>Что делать, если сломалось снова?</summary><p>Звоните мне напрямую — приезжаю и разбираюсь бесплатно по гарантии. Вы общаетесь не с диспетчером, а с мастером, который делал ремонт.</p></details>
+    <details><summary>Как быстро приедете?</summary><p>По Лотошино выезжаю в день обращения, обычно в течение часа. По соседним районам — в удобное для вас время.</p></details>
+    <details><summary>Ремонт на дому или в мастерской?</summary><p>Крупную технику (холодильники, стиральные машины) чиню на дому. Электронные модули, платы и мелкую технику — в мастерской, срок ремонта 1–3 дня.</p></details>
+    <details><summary>Как можно оплатить?</summary><p>Наличными или переводом на карту. Оплата после ремонта — когда вы убедились, что всё работает.</p></details>
+    <details><summary>Ремонт модуля дешевле замены?</summary><p>Почти всегда да — в 2–3 раза дешевле, чем менять модуль целиком. Плюс родная плата обычно надёжнее аналога. Ремонтирую платы на уровне компонентов.</p></details>
+  </div>
+</section>
+
+<section id="contacts">
+  <div class="container">
+    <h2>Контакты</h2>
+    <p class="sub">Звоните с 9:00 до 20:00, без выходных. Или оставьте заявку — перезвоню сам.</p>
+    <div class="contacts-wrap">
+      <div class="contact-box">
+        <h3>Мастер: Евгений</h3>
+        <a class="tel" href="tel:+79015551397">+7 901 555-13-97</a>
+        <div class="muted">Звонить с 9:00 до 20:00, без выходных</div>
+        <a class="btn btn-green" href="https://wa.me/79015551397">Написать в WhatsApp</a>
+        <div class="zone">
+          <b>Зона выезда</b>
+          <ul>
+            <li>Лотошино и все населённые пункты района</li>
+            <li>Шаховская</li>
+            <li>Волоколамск</li>
+            <li>Клин</li>
+            <li>Истра</li>
+          </ul>
+          <p style="margin-top:8px; font-size:14px; color:#777;">Если вашего пункта нет в списке — всё равно звоните, договоримся о выезде.</p>
+        </div>
+      </div>
+      <div class="contact-box">
+        <h3>Оставить заявку</h3>
+        <form action="https://formsubmit.co/xolodgen@gmail.com" method="POST">
+          <input type="hidden" name="_subject" value="Заявка с сайта — ремонт в Лотошино">
+          <input type="hidden" name="_captcha" value="false">
+          <input type="hidden" name="_next" value="">
+          <label for="name">Ваше имя</label>
+          <input type="text" id="name" name="name" required>
+          <label for="phone">Телефон</label>
+          <input type="tel" id="phone" name="phone" required>
+          <label for="problem">Что сломалось?</label>
+          <textarea id="problem" name="problem" rows="3" required></textarea>
+          <button type="submit" class="btn btn-blue" style="width:100%">Отправить заявку</button>
+        </form>
+      </div>
+    </div>
+    <div class="contact-box" style="margin-top:26px">
+      <!-- ВСТАВЬТЕ ФОТО ЗДЕСЬ -->
+      <div class="photo-placeholder">Место для фото Евгения.<br>Пришлите фото — оно будет здесь.</div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="container">
+    <p><a href="tel:+79015551397">+7 901 555-13-97</a> — Евгений, с 9:00 до 20:00</p>
+    <p>Частный мастер по ремонту бытовой техники и электроники. Лотошино, Шаховская, Волоколамск, Клин, Истра.</p>
+    <p style="margin-top:8px; opacity:.7;">Работаю без посредников — вы общаетесь напрямую с мастером.</p>
+  </div>
+</footer>
+
+<a class="wa-float" href="https://wa.me/79015551397" aria-label="WhatsApp">
+  <svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12c0 1.85.5 3.58 1.38 5.07L2 22l5.07-1.33A9.94 9.94 0 0 0 12 22c5.52 0 10-4.48 10-10S17.52 2 12 2zm5.13 14.03c-.22.62-1.28 1.18-1.79 1.22-.51.05-.99.22-2.78-.58-2.17-.96-3.55-3.22-3.66-3.37-.11-.15-.87-1.16-.87-2.22 0-1.06.56-1.58.76-1.8.2-.22.43-.27.58-.27.14 0 .29.01.42.01.13 0 .32-.05.5.38.18.44.63 1.53.68 1.64.05.11.09.24.01.39-.08.15-.15.24-.29.39-.14.15-.3.33-.42.44-.14.14-.29.29-.12.57.17.29.75 1.23 1.61 1.99 1.1.98 2.03 1.29 2.32 1.43.29.15.46.12.63-.07.17-.2.73-.85.92-1.14.2-.29.39-.24.66-.14.27.1 1.7.8 1.99.94.29.15.48.22.55.34.07.13.07.72-.15 1.34z"/></svg>
+</a>
+
+</body>
+</html>
