@@ -373,6 +373,16 @@ footer a { color:#fff; text-decoration:none; font-weight:700; }
 
   
 <!-- Yandex.Metrika counter -->
+  <script>
+document.querySelectorAll('a[href^="tel:"], a[href*="wa.me"]').forEach(function(el){
+  el.addEventListener('click', function(){
+    if (typeof ym !== 'undefined') {
+      ym(114253011, 'reachGoal', el.getAttribute('href').indexOf('tel:') === 0 ? 'call' : 'whatsapp');
+    }
+  });
+});
+</script>
+
 <script type="text/javascript">
     (function(m,e,t,r,i,k,a){
         m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
